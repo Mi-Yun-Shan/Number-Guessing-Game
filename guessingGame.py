@@ -32,3 +32,30 @@ def gameplayLoop(guessesMade, loopLimit): # gameplay loop
     # lose condition
     print("Better luck next time!\n")
     menu()
+
+def menu(): # menu function used in main() to produce the game-mode selection
+
+    print("Difficulty Selection:")
+    print("1. Easy (10 Guesses)")
+    print("2. Medium (5 Guesses)")
+    print("3. Hard (3 Guesses)")
+    print("0. Exit\n")
+
+    # input validation
+    try:
+        difficultyChoice = int(input("Enter your choice: \n"))
+    except:
+        print("Invalid input\n")
+        menu()
+
+
+    # selection
+    if difficultyChoice == 1:
+        gameplayLoop(1, 10)
+    elif difficultyChoice == 2:
+        gameplayLoop(1, 5)
+    elif difficultyChoice == 3:
+        gameplayLoop(1, 3)
+    else:
+        print("Input out of range")
+        menu()
