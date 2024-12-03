@@ -59,3 +59,10 @@ def menu(): # menu function used in main() to produce the game-mode selection
     else:
         print("Input out of range")
         menu()
+
+def main():
+    print("Welcome to the Guessing Game!")
+    print("I'm thinking of a number between 1 and 100... Can you guess which one? \n")
+    menu()
+
+main()
